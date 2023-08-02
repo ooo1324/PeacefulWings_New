@@ -294,6 +294,54 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "LabberDown",
+            "id": "c1c5de3a-04b8-41bb-b83a-1d63d9c5f333",
+            "actions": [
+                {
+                    "name": "LeftLabber",
+                    "type": "Button",
+                    "id": "8128b21c-e08f-4fbf-9609-75d9e64555a0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RightLabber",
+                    "type": "Button",
+                    "id": "d523a657-40d4-417e-a7ab-893c811a9d17",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "c985226a-dfc9-4070-b86c-966540e8b716",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftLabber",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2aea6d65-c970-4ef2-a868-1f757302d743",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RightLabber",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [
