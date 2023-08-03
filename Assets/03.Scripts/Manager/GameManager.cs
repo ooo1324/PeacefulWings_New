@@ -7,15 +7,18 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     
-
     [SerializeField]
     public GameObject leftBird;
     public GameObject rightBird;
     public GameObject pigeon;
 
+    [HideInInspector]
+    public CameraTargetUI cameraTargetUI;
+
     private void Awake()
     {
-        instance = this;    
+        instance = this;
+        cameraTargetUI = GetComponent<CameraTargetUI>();
     }
 
 

@@ -601,6 +601,7 @@ GameObject:
   m_Component:
   - component: {fileID: 226461120}
   - component: {fileID: 226461119}
+  - component: {fileID: 226461121}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -623,6 +624,7 @@ MonoBehaviour:
   leftBird: {fileID: 856436697}
   rightBird: {fileID: 412506768}
   pigeon: {fileID: 1496608748}
+  cameraTargetUI: {fileID: 0}
 --- !u!4 &226461120
 Transform:
   m_ObjectHideFlags: 0
@@ -638,6 +640,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &226461121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226461118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeeaf66afc55e5e4ab954112b17fe465, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  john_camera: {fileID: 369332138}
+  Pee_camera: {fileID: 2054343740}
 --- !u!1 &252790105
 GameObject:
   m_ObjectHideFlags: 0
@@ -783,12 +799,12 @@ GameObject:
   - component: {fileID: 369332141}
   - component: {fileID: 369332140}
   m_Layer: 5
-  m_Name: Active
+  m_Name: Pee_Disabled
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &369332139
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4659,12 +4675,12 @@ GameObject:
   - component: {fileID: 2054343743}
   - component: {fileID: 2054343742}
   m_Layer: 5
-  m_Name: Active
+  m_Name: John_Disabled
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2054343741
 RectTransform:
   m_ObjectHideFlags: 0

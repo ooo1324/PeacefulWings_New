@@ -19,16 +19,21 @@ public class CameraControl : MonoBehaviour
 
 
     private void Update()
-    {
-
+    {  
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            TargetChange(EBirdType.Pee);
+            if (currFollowType != EBirdType.Pigeon)
+            {
+                TargetChange(EBirdType.Pee);
+            }    
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            TargetChange(EBirdType.John);
+            if (currFollowType != EBirdType.Pigeon)
+            {
+                TargetChange(EBirdType.John);
+            }     
         }
     }
 
@@ -55,15 +60,16 @@ public class CameraControl : MonoBehaviour
         {
             case EBirdType.Pee:
                 vcam.Follow = GameManager.instance.leftBird.transform;
+                GameManager.instance.cameraTargetUI.Active_Pee();
                 break;
             case EBirdType.John:
                 vcam.Follow = GameManager.instance.rightBird.transform;
+                GameManager.instance.cameraTargetUI.Ative_John();
                 break;
             case EBirdType.Pigeon:
                 vcam.Follow = GameManager.instance.pigeon.transform;
+                GameManager.instance.cameraTargetUI.Active_Pegeon();
                 break;
         }
-
     }
-
 }

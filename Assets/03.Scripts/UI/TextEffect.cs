@@ -17,7 +17,6 @@ public class TextEffect : MonoBehaviour
     [HideInInspector]
     public bool isAnimation;
 
-    private bool isStop = false;
     private void Awake()
     {
         msgText = GetComponent<Text>();
@@ -32,7 +31,6 @@ public class TextEffect : MonoBehaviour
         }
         else
         {
-            Debug.Log("Stop Corutine");
             StopAllCoroutines();
             msgText.text = targetMsg;
             EffectEnd();
@@ -41,7 +39,6 @@ public class TextEffect : MonoBehaviour
 
     void EffectStart()
     {
-        Debug.Log("text Start");
         isAnimation = true;
         msgText.text = "";
 
