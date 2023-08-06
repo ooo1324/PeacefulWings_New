@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 public class DialogSystem : MonoBehaviour
 {
-    public Dictionary<string, List<DialogData>> talkDic;
+    //public Dictionary<string, List<DialogData>> talkDic;
+
+    public List<DialogData> talkDic;
     public List<Sprite> peeSpriteList;
     public List<Sprite> johnSpriteList;
     public TextEffect peeText;
@@ -15,34 +17,100 @@ public class DialogSystem : MonoBehaviour
     public AudioClip peeAudioClip;
     public AudioClip johnAudioClip;
 
+    //Test
+    public GameObject Pee;
+    public GameObject John;
+
+    private int idx;
+
     private List<DialogData> currTalkList;
+    private AudioSource audioSource;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
+    private void Start()
+    {
+        idx = 0;
+        TalkStart("");
+    }
 
     public void TalkStart(string key)
     {
-        currTalkList = talkDic[key];
-        NextTalk(0);
+        //currTalkList = talkDic[key];
+        currTalkList = talkDic;
+        NextTalk(idx, true);
     }
 
-    public void NextTalk(int idx)
+    private void Update()
     {
-        if (currTalkList.Count > idx)
-        {
-            DialogData currData = currTalkList[idx];
+        if (Input.GetKeyDown(KeyCode.Space))
+        {     
+            if (currTalkList.Count > idx)
+            {
+                bool isSound = false;
+                if (currTalkList[idx].birdType == EBirdType.Pee)
+                {
+                    if (!peeText.isAnimation)
+                    {
+                        idx++;
+                        isSound = true;
+                    }
+                }
+                else if (currTalkList[idx].birdType == EBirdType.John)
+                {
+                    if (!johnText.isAnimation)
+                    {
+                        idx++;
+                        isSound = true;
+                    }
+                }
 
-            if (currData.birdType == EBirdType.Pee)
+                NextTalk(idx, isSound);
+            } 
+            else
             {
-                
-                peeText.SetMsg(currData.talkText);
+                //대화끝
+                Pee.SetActive(false);
+                John.SetActive(false);
+                idx = 0;
             }
-            else if (currData.birdType == EBirdType.John)
-            {
-                
-            }
+          
         }
-        else
+    }
+
+    public void NextTalk(int idx, bool isSound = true)
+    {
+        if (currTalkList.Count <= idx)
         {
-            //대화끝
+            return;
         }
+
+        DialogData currData = currTalkList[idx];
+        if (currData.birdType == EBirdType.Pee)
+        {
+            Pee.SetActive(true);
+            John.SetActive(false);
+            peeImg.sprite = peeSpriteList[currData.imgIdx];
+            peeText.SetMsg(currData.talkText);
+      
+            audioSource.clip = peeAudioClip;
+        }
+        else if (currData.birdType == EBirdType.John)
+        {
+            John.SetActive(true);
+            Pee.SetActive(false);
+            johnImg.sprite = johnSpriteList[currData.imgIdx];
+            johnText.SetMsg(currData.talkText);
+        
+            audioSource.clip = johnAudioClip;
+        }
+
+        if(isSound)
+            audioSource.Play();
+     
     }
 }
 
