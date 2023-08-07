@@ -15,15 +15,22 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public CameraTargetUI cameraTargetUI;
 
+    private AudioSource audioSource;
+
     private void Awake()
     {
         instance = this;
         cameraTargetUI = GetComponent<CameraTargetUI>();
     }
 
-
     public void OnDie()
     {
-        SceneManager.LoadScene("Level2Scene");
+        SceneManager.LoadScene("Stage2Scene");
+    }
+
+    public void Clear()
+    {
+        SceneManager.LoadScene("Stage3Scene");
+        AllGameData.Current_Level = 3;
     }
 }

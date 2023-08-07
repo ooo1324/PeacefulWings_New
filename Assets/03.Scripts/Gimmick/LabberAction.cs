@@ -24,6 +24,12 @@ public class LabberAction : MonoBehaviour
     private TwoLabberAction twoladderAction;
     GameObject actionBird;
     PlayerController playerController;
+    private AudioSource audioSource;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     public void OnRightLabber(InputValue value)
     {
@@ -124,16 +130,14 @@ public class LabberAction : MonoBehaviour
 
     IEnumerator LabberActiveAction()
     {
-        isInit = true;
-
         LabberObject.SetActive(false);
-
+        audioSource.Play();
         playerController.LabberAction(gameObject.transform);
         yield return new WaitForSeconds(delayTime);
-
-       
+    
         if (LbSystemType == ELabberType.OneLabber)
         {
+            isInit = true;
             actionObject.SetActive(true);
             if (playableDirector != null)
             {

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class TwoLabberAction : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class TwoLabberAction : MonoBehaviour
     public bool firstLabber = false;
     public bool secondLabber = false;
     private bool isInit = true;
-
+    public PlayableDirector playableDirector;
     private bool timeOut = true;
 
     public GameObject actionObj;
@@ -41,6 +42,7 @@ public class TwoLabberAction : MonoBehaviour
                 actionObj.SetActive(true);
                 keyObj.SetActive(true);
                 dialogObj.SetActive(true);
+                playableDirector.Play();
             }
         }
 

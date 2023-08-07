@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public float walkspeed;
     public float jumpPower;
     public float runSpeed;
+    public AudioClip jumpAudio;
 
     [HideInInspector]
     public bool isPush = false;
@@ -25,12 +26,14 @@ public class PlayerController : MonoBehaviour
     private bool isPlayingAnim = false;
 
     private GameObject nearBox;
+    private AudioSource audioSource;
 
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         spriter = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
         speed = walkspeed;
     }
 
@@ -70,11 +73,15 @@ public class PlayerController : MonoBehaviour
                 if (isGrounded)
                 {
                     rigid.velocity = new Vector2(rigid.velocity.x, jumpPower);
+                    audioSource.clip = jumpAudio;
+                    audioSource.Play();
                 }
             }
             else
             {
                 rigid.velocity = new Vector2(rigid.velocity.x, jumpPower);
+                audioSource.clip = jumpAudio;
+                audioSource.Play();
             }
 
         }
@@ -175,7 +182,7 @@ public class PlayerController : MonoBehaviour
         //ÃÑ¾Ë ÇÇ°Ý 
         if (collision.gameObject.layer == LayerMask.NameToLayer("Bullet"))
         {
-            //GameManager.instance.OnDie();
+            GameManager.instance.OnDie();
         }
     }
 
