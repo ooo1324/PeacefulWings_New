@@ -17,9 +17,12 @@ public class TextEffect : MonoBehaviour
     [HideInInspector]
     public bool isAnimation;
 
+    private AudioSource audioSource;
+
     private void Awake()
     {
         msgText = GetComponent<Text>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void SetMsg(string msg)
@@ -54,9 +57,12 @@ public class TextEffect : MonoBehaviour
         for (int i = 0; i < targetMsg.Length; i++)
         {
             msgText.text += targetMsg[i];
-            //Sound
-            //if (targetMsg[index] != ' ' && targetMsg[index] != '.')
-            //    audioSource.Play();
+
+            if (audioSource != null)
+            {
+                if (targetMsg[i] != ' ' && targetMsg[i] != '.')
+                    audioSource.Play();
+            }
 
             yield return new WaitForSeconds(interval);
         }

@@ -47,7 +47,7 @@ public class DialogSystem : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
-        {     
+        {   
             if (currTalkList.Count > idx)
             {
                 bool isSound = false;
