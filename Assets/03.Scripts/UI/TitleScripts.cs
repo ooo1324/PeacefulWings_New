@@ -7,6 +7,7 @@ public class TitleScripts : MonoBehaviour
 {
     public void StoryScene()
     {
-        SceneManager.LoadScene("StoryScene");
+        AllGameData.Current_Level += 1;
+        SceneManager.LoadScene(AllGameData.Current_Level);
     }
 }

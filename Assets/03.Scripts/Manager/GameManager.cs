@@ -24,13 +24,13 @@ public class GameManager : MonoBehaviour
     }
 
     public void OnDie()
-    {
-        SceneManager.LoadScene("Stage2Scene");
+    {    
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void Clear()
     {
-        SceneManager.LoadScene("Stage3Scene");
-        AllGameData.Current_Level = 3;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        AllGameData.Current_Level += 1;
     }
 }

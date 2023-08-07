@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PigeonItem : MonoBehaviour
 {
-    BoxCollider2D collider;
+    BoxCollider2D boxCollider;
 
     private void Awake()
     {
-        collider = GetComponent<BoxCollider2D>();
+        boxCollider = GetComponent<BoxCollider2D>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -16,7 +16,7 @@ public class PigeonItem : MonoBehaviour
         {
             PosManager.instance.isPigeonActive = true;
 
-            collider.enabled = false;
+            boxCollider.enabled = false;
         }
     }
 }

@@ -7,12 +7,9 @@ public class TypeBlockGen : MonoBehaviour
     public GameObject typeBlockObj;
     public float delaySec;
     private bool isActive;
-    private GameObject obj;
 
     private void Start()
-    {   
-        obj = Instantiate(typeBlockObj, gameObject.transform);
-        obj.GetComponent<TypeBlock>().blockgen = this;
+    {
         isActive = true;
     }
 
@@ -22,15 +19,12 @@ public class TypeBlockGen : MonoBehaviour
             StartCoroutine(delayCreate());
     }
 
-
     IEnumerator delayCreate()
     {
         isActive = false;
-        Destroy(obj);
+        typeBlockObj.SetActive(false);
         yield return new WaitForSeconds(delaySec);
-        obj = Instantiate(typeBlockObj, gameObject.transform);
-        if(obj !=null)
-            obj.GetComponent<TypeBlock>().blockgen = this;
+        typeBlockObj.SetActive(true);
         isActive = true;
     }
 }

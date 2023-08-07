@@ -23,7 +23,7 @@ public class TypeBlock : MonoBehaviour
         {
             if (collision.gameObject.layer == LayerMask.NameToLayer("Pee"))
             {
-                destroySec = 0.1f;
+                destroySec = 0.05f;
             }
             else if (collision.gameObject.layer == LayerMask.NameToLayer("John"))
             {
