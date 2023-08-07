@@ -55,8 +55,8 @@ public class StoryScripts : MonoBehaviour
         else
         {
             //Next Scene
-            //SceneManager.LoadScene("Stage1Scene");
-            SceneManager.LoadScene("TestScene");
+            SceneManager.LoadScene("Stage2Scene");
+           // SceneManager.LoadScene("TestScene");
             AllGameData.Current_Level = 1;
         }
     }

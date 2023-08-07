@@ -20,7 +20,7 @@ public class LabberAction : MonoBehaviour
     public PlayableDirector playableDirector; 
 
     bool isLabber = false;
-
+    private bool isInit = false;
     private TwoLabberAction twoladderAction;
     GameObject actionBird;
     PlayerController playerController;
@@ -37,13 +37,15 @@ public class LabberAction : MonoBehaviour
                     {
                         if (twoladderAction.firstLabber && twoladderAction.secondLabber)
                         {
-                            StartCoroutine(LabberActiveAction());
+                            if(!isInit)
+                             StartCoroutine(LabberActiveAction());
                         }
                     }
                 }
                 else
                 {
-                    StartCoroutine(LabberActiveAction());
+                    if (!isInit)
+                        StartCoroutine(LabberActiveAction());
                 }
             }
         }
@@ -61,13 +63,15 @@ public class LabberAction : MonoBehaviour
                     {
                         if (twoladderAction.firstLabber && twoladderAction.secondLabber)
                         {
-                            StartCoroutine(LabberActiveAction());
+                            if (!isInit)
+                                StartCoroutine(LabberActiveAction());
                         }
                     }
                 }
                 else
                 {
-                    StartCoroutine(LabberActiveAction());
+                    if (!isInit)
+                        StartCoroutine(LabberActiveAction());
                 }
             }
         }
@@ -120,11 +124,14 @@ public class LabberAction : MonoBehaviour
 
     IEnumerator LabberActiveAction()
     {
+        isInit = true;
+
         LabberObject.SetActive(false);
 
         playerController.LabberAction(gameObject.transform);
         yield return new WaitForSeconds(delayTime);
 
+       
         if (LbSystemType == ELabberType.OneLabber)
         {
             actionObject.SetActive(true);
