@@ -1,0 +1,173 @@
+{
+	"start" : [
+		{
+			"birdType" : 0,
+			"imgIdx" : 1,
+			"talkText_kor" : "여...여긴 어디지...? 난 살아남은 건가?",
+			"talkText_eng" : "Where am I...where am I...? Am I alive?"
+		},
+		{
+			"birdType" : 1,
+			"imgIdx" : 1,
+			"talkText_kor" : "적군인가! 손들어...! 윽! 무기도 없는데 날개까지...!",
+			"talkText_eng" : "Enemy! Hands up...! Ugh! No weapons, and wings...!"
+		},
+		{
+			"birdType" : 0,
+			"imgIdx" : 3,
+			"talkText_kor" : "헉! 당신도? 저는 왼쪽 날개가 다쳤습니다! 그쪽은 오른쪽 날개가 다치셨네요!",
+			"talkText_eng" : "I have a wounded left wing, and you have a wounded right wing!"
+		},
+		{
+			"birdType" : 1,
+			"imgIdx" : 2,
+			"talkText_kor" : "흰비둘기가 어디서 친한척이야! 혼나고싶나!",
+			"talkText_eng" : "I'm not related to a white pigeon! I want to be punished!"
+		},
+		{
+			"birdType" : 0,
+			"imgIdx" : 0,
+			"talkText_kor" : "글쎄요 지금 둘다 죽게 생겼는데 아군 적군이 어딨습니까.",
+			"talkText_eng" : "Well, we're both going to die now, so where are the friendly enemies?"
+		},
+		{
+			"birdType" : 1,
+			"imgIdx" : 0,
+			"talkText_kor" : "태평한 녀석이로군... (하지만 틀린말은 아니야...) 좋다 이곳을 탈출할때까지 만이라도 협력해주지!",
+			"talkText_eng" : "You're an easy-going fellow... (but you're not wrong...) Good, I'll cooperate until we get out of here!"
+		},
+		{
+			"birdType" : 0,
+			"imgIdx" : 2,
+			"talkText_kor" : "(거만한 아저씨네...그래도 이렇게 말하면 화내겠지?) 하.하. 쿨하시네요! 좋습니다! 가볼까요!",
+			"talkText_eng" : "(You're being arrogant...but you're going to get mad at me for saying that, right?) Ha. Cool, that's great, let's go!"
+		}
+	],
+	"sprint" : [
+		{
+			"birdType" : 0,
+			"imgIdx" : 1,
+			"talkText_kor" : "이런! 저기는 내 다리로 지나가려다가는 새모이가 되버리겠는걸?",
+			"talkText_eng" : "Oh no, that's going to be a birdie trying to run over my leg."
+		},
+		{
+			"birdType" : 1,
+			"imgIdx" : 5,
+			"talkText_kor" : "흥! 이정도도 못지나가다니 아주 쓸모없는 녀석이군. 비켜봐! 내 속도를 보여주지!",
+			"talkText_eng" : "Phew! You're so useless you can't even keep up with me. Move over! I'll show you my speed!"
+		}
+	],
+	"push" : [
+		{
+			"birdType" : 1,
+			"imgIdx" : 0,
+			"talkText_kor" : "내 날개만 멀쩡했어도 저 박스를 던져버릴수 있었을텐데! 아쉽군. 자 이번엔 네 차례다 애송이!",
+			"talkText_eng" : "If only my wings were still intact, I could have thrown that box! Too bad. Now it's your turn, kid!"
+		},
+		{
+			"birdType" : 0,
+			"imgIdx" : 6,
+			"talkText_kor" : "(힘쓸때만 부하를 찾다니 저 나라도 똑같네..) 넵 비켜보십쇼!",
+			"talkText_eng" : "Yes, step aside!"
+		}
+	],
+	"fly" : [
+		{
+			"birdType" : 0,
+			"imgIdx" : 0,
+			"talkText_kor" : "저기까지 가려면 나는 수밖에 없겠는데요?",
+			"talkText_eng" : "I guess we have to fly to get there, right?"
+		},
+		{
+			"birdType" : 1,
+			"imgIdx" : 2,
+			"talkText_kor" : "날개가 이 모양인데 어떻게 난다는 거냐 멍청아!",
+			"talkText_eng" : "How do you fly when your wings look like this, you idiot?"
+		},
+		{
+			"birdType" : 0,
+			"imgIdx" : 0,
+			"talkText_kor" : "이건 어떻습니까? 저는 오른쪽 날개로 상사님은 왼쪽날개로 날아보는겁니다. 둘이 힘을 합치면 날수 있지 않을까요?",
+			"talkText_eng" : "How about this: I'll take the right wing and you take the left. Together we can fly, right?"
+		},
+		{
+			"birdType" : 1,
+			"imgIdx" : 3,
+			"talkText_kor" : "푸하하! 정신나간! 그게 말이 된다고 생각하나!",
+			"talkText_eng" : "You're crazy! You think that makes sense?"
+		},
+		{
+			"birdType" : 0,
+			"imgIdx" : 5,
+			"talkText_kor" : "뭐 그럼 다른 방법 있습니까? 둘이 사이좋게 새모이가 되는것 말구요.",
+			"talkText_eng" : "Well, is there any other way? We can both die here."
+		},
+		{
+			"birdType" : 1,
+			"imgIdx" : 1,
+			"talkText_kor" : "...에잇 빨리 붙어라! 어떻게든 되겠지!",
+			"talkText_eng" : "...come on! It'll work!"
+		},
+		{
+			"birdType" : 0,
+			"imgIdx" : 2,
+			"talkText_kor" : "넵 가시죠!",
+			"talkText_eng" : "Yes, let's go!"
+		}
+	],
+	"flyEnd" : [
+		{
+			"birdType" : 1,
+			"imgIdx" : 1,
+			"talkText_kor" : "이게 되다니 믿을수가 없군...",
+			"talkText_eng" : "I can't believe this is happening..."
+		},
+		{
+			"birdType" : 0,
+			"imgIdx" : 2,
+			"talkText_kor" : "거봐요 제 말이 맞죠? 이제 좀 서로를 믿어보자구요!",
+			"talkText_eng" : "See, I'm right, right? Let's trust each other!"
+		},
+		{
+			"birdType" : 1,
+			"imgIdx" : 0,
+			"talkText_kor" : "....빨리 나가기나 하지.",
+			"talkText_eng" : "....Get the hell out of here."
+		}
+	],
+	"end" : [
+		{
+			"birdType" : 1,
+			"imgIdx" : 0,
+			"talkText_kor" : "....고맙네 자네가 아니었으면 꼼짝없이 새모이가 될뻔 했어.",
+			"talkText_eng" : "....Thank you, I would have died if it wasn't for you."
+		},
+		{
+			"birdType" : 0,
+			"imgIdx" : 0,
+			"talkText_kor" : "저도 상사님 아니었으면 큰일날뻔 했습니다. 정말 감사합니다.",
+			"talkText_eng" : "I would have been in trouble if it wasn't for you, so thank you so much."
+		}
+		,
+		{
+			"birdType" : 1,
+			"imgIdx" : 4,
+			"talkText_kor" : "....자네와 탈출하면서 많은 생각이 들었네. 우리는 다를게 없어! 서로 힘을 합치니까 믿을 수 없는 일도 해내지 않았나!",
+			"talkText_eng" : "....I've been thinking a lot about escaping with you. We're no different, and together we've done unbelievable things!"
+		}
+		,
+		{
+			"birdType" : 0,
+			"imgIdx" : 4,
+			"talkText_kor" : "맞습니다.... 우리는....이제...",
+			"talkText_eng" : "That's right.... We have....now..."
+		}
+		,
+		{
+			"birdType" : 1,
+			"imgIdx" : 4,
+			"talkText_kor" : "전쟁을 멈춰야하네!(합니다!)",
+			"talkText_eng" : "We need to stop the war!"
+		}
+	]
+}

@@ -19,17 +19,6 @@ public class TwoLabberAction : MonoBehaviour
 
     public void CompleteAction(EBirdType type)
     {
-        //if (type == EBirdType.Pee)
-        //{
-        //    firstAction = true;
-        //}
-        //else if (type == EBirdType.John)
-        //{
-        //    secondAction = true;
-        //}
-
-
-
         if (isInit)
         {
             isInit = false;

@@ -26,11 +26,13 @@ public class GameManager : MonoBehaviour
     public void OnDie()
     {    
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        AllGameData.Current_Init = false;
     }
 
     public void Clear()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         AllGameData.Current_Level += 1;
+        AllGameData.Current_Init = true;
     }
 }
