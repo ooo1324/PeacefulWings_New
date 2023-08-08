@@ -15,6 +15,9 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public CameraTargetUI cameraTargetUI;
 
+    [HideInInspector]
+    public bool isStop = false;
+
     private AudioSource audioSource;
 
     private void Awake()

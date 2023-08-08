@@ -67,6 +67,7 @@ public class DialogSystem : MonoBehaviour
         if (!panel.activeSelf)
             panel.SetActive(true);
 
+        GameManager.instance.isStop = true;
         Pee.SetActive(true);
         John.SetActive(true);
         john_anim.SetInteger("activeType", 2);
@@ -112,6 +113,7 @@ public class DialogSystem : MonoBehaviour
                 panel.SetActive(false);
                 idx = 0;
                 isDialogPlay = false;
+                GameManager.instance.isStop = false;
             }
           
         }

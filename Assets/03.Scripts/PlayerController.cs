@@ -43,11 +43,16 @@ public class PlayerController : MonoBehaviour
     }
 
     private void FixedUpdate()
-    {
+    {   
         if (isPlayingAnim) return;
 
         anim.SetBool("isWalk", (inputVec.x != 0));
 
+        if (GameManager.instance.isStop)
+        {
+            rigid.velocity = Vector2.zero;
+            return;
+        }
         rigid.velocity = new Vector2(inputVec.x * (isGrounded ? speed : walkspeed), rigid.velocity.y);
 
         if (birdType == EBirdType.John)
@@ -65,6 +70,7 @@ public class PlayerController : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext value)
     {
+        if (GameManager.instance.isStop) return;
         if (isPlayingAnim) return;
         if (value.started)
         {
@@ -97,6 +103,7 @@ public class PlayerController : MonoBehaviour
 
     public void Run(InputAction.CallbackContext value)
     {
+        if (GameManager.instance.isStop) return;
         if (isPlayingAnim) return;
         if (value.started)
         {
@@ -111,6 +118,7 @@ public class PlayerController : MonoBehaviour
 
     public void Push(InputAction.CallbackContext value)
     {
+        if (GameManager.instance.isStop) return;
         if (isPlayingAnim) return;
         if (value.started)
         {
@@ -182,6 +190,7 @@ public class PlayerController : MonoBehaviour
         //ÃÑ¾Ë ÇÇ°Ý 
         if (collision.gameObject.layer == LayerMask.NameToLayer("Bullet"))
         {
+            if (GameManager.instance.isStop) return;
             GameManager.instance.OnDie();
         }
     }

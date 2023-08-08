@@ -32,6 +32,7 @@ public class PosManager : MonoBehaviour
 
         if (isPigeonActive)
         {
+            if (GameManager.instance.isStop) return;
             // isGrounded 확인해서 
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -44,7 +45,8 @@ public class PosManager : MonoBehaviour
                     GameManager.instance.leftBird.SetActive(true);
                     GameManager.instance.rightBird.SetActive(true);
 
-                    cameraControl.SwichTarget();
+                    if(cameraControl != null)
+                        cameraControl.SwichTarget();
                 }
                 else
                 {
@@ -55,7 +57,8 @@ public class PosManager : MonoBehaviour
                         GameManager.instance.leftBird.SetActive(false);
                         GameManager.instance.rightBird.SetActive(false);
 
-                        cameraControl.SwichTarget();
+                        if (cameraControl != null)
+                            cameraControl.SwichTarget();
                     }
                 }
 

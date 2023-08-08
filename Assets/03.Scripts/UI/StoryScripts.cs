@@ -10,6 +10,7 @@ public class StoryScripts : MonoBehaviour
     public List<StoryData> story;
     public Text text;
     public Image storyImg;
+    public bool isEnding;
 
     TextEffect textEffect;
     private int idx = 0;
@@ -54,11 +55,18 @@ public class StoryScripts : MonoBehaviour
         }
         else
         {
-            AllGameData.Current_Level += 1;
-            //Next Scene
-            SceneManager.LoadScene(AllGameData.Current_Level);
-            // SceneManager.LoadScene("TestScene");
-           
+            if (isEnding)
+            {
+
+            }
+            else
+            {
+
+                AllGameData.Current_Level += 1;
+                //Next Scene
+                SceneManager.LoadScene(AllGameData.Current_Level);
+            }
+
         }
     }
 }

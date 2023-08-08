@@ -22,6 +22,7 @@ public class CameraControl : MonoBehaviour
     {  
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
+            if (GameManager.instance.isStop) return;
             if (currFollowType != EBirdType.Pigeon)
             {
                 TargetChange(EBirdType.Pee);
@@ -30,6 +31,7 @@ public class CameraControl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
+            if (GameManager.instance.isStop) return;
             if (currFollowType != EBirdType.Pigeon)
             {
                 TargetChange(EBirdType.John);
