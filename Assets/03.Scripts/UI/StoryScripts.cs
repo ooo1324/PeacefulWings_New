@@ -69,6 +69,11 @@ public class StoryScripts : MonoBehaviour
 
         }
     }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }
 
 /// <summary>

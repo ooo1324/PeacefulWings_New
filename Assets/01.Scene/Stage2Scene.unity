@@ -10517,7 +10517,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1358605122}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.73621, y: 26.488255, z: -0.6684334}
+  m_LocalPosition: {x: 24, y: 26.488255, z: -0.6684334}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11456,19 +11456,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4627725125278329452, guid: 2c9777413df072249ba7c49366941fd2, type: 3}
       propertyPath: m_Size.x
-      value: 2.671875
+      value: 1.9402847
       objectReference: {fileID: 0}
     - target: {fileID: 4627725125278329452, guid: 2c9777413df072249ba7c49366941fd2, type: 3}
       propertyPath: m_Size.y
-      value: 2.1321118
+      value: 4.605586
       objectReference: {fileID: 0}
     - target: {fileID: 4627725125278329452, guid: 2c9777413df072249ba7c49366941fd2, type: 3}
       propertyPath: m_Offset.x
-      value: 2.425631
+      value: 1.8159714
       objectReference: {fileID: 0}
     - target: {fileID: 4627725125278329452, guid: 2c9777413df072249ba7c49366941fd2, type: 3}
       propertyPath: m_Offset.y
-      value: -0.5347234
+      value: 0.7020135
       objectReference: {fileID: 0}
     - target: {fileID: 4627725125278329453, guid: 2c9777413df072249ba7c49366941fd2, type: 3}
       propertyPath: m_RootOrder
@@ -15841,6 +15841,18 @@ PrefabInstance:
     - target: {fileID: 4211288883505974690, guid: cc3840e7f08ec684d88448f42827df96, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777950405587032949, guid: cc3840e7f08ec684d88448f42827df96, type: 3}
+      propertyPath: m_BiasX
+      value: 0.054999962
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777950405587032949, guid: cc3840e7f08ec684d88448f42827df96, type: 3}
+      propertyPath: m_ScreenX
+      value: 0.339
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777950405587032949, guid: cc3840e7f08ec684d88448f42827df96, type: 3}
+      propertyPath: m_ScreenY
+      value: 0.603
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4539613283846621660, guid: cc3840e7f08ec684d88448f42827df96, type: 3}
