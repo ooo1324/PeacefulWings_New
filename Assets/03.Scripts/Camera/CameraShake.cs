@@ -12,12 +12,18 @@ public class CameraShake : MonoBehaviour
     public float ShakeFrequency = 2.0f;         // Cinemachine Noise Profile Parameter
 
     private float ShakeElapsedTime = 0f;
+    private AudioSource audioSource;
 
     // Cinemachine Shake
     public CinemachineVirtualCamera VirtualCamera;
     private CinemachineBasicMultiChannelPerlin virtualCameraNoise;
 
     private bool isPlay = false;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     // Use this for initialization
     void Start()
     {
@@ -37,6 +43,12 @@ public class CameraShake : MonoBehaviour
         {
             ShakeElapsedTime = ShakeDuration;
         }
+        else
+        {
+            if(audioSource != null)
+                if (audioSource.isPlaying)
+                    audioSource.Stop();
+        }
 
 
         // If the Cinemachine componet is not set, avoid update
@@ -45,6 +57,9 @@ public class CameraShake : MonoBehaviour
             // If Camera Shake effect is still playing
             if (ShakeElapsedTime > 0)
             {
+                if (audioSource != null)
+                    if (!audioSource.isPlaying)
+                        audioSource.Play();
                 // Set Cinemachine Camera Noise parameters
                 virtualCameraNoise.m_AmplitudeGain = ShakeAmplitude;
                 virtualCameraNoise.m_FrequencyGain = ShakeFrequency;
