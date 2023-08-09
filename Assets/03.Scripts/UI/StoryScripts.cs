@@ -51,7 +51,15 @@ public class StoryScripts : MonoBehaviour
                 storyImg.color = Color.white;
 
             storyImg.sprite = story[idx].storySprite;
-            textEffect.SetMsg(story[idx].storyText);
+            if (AllGameData.isEng)
+            {
+                textEffect.SetMsg(story[idx].storyText_eng);
+            }
+            else
+            {
+                textEffect.SetMsg(story[idx].storyText_kor);
+            }
+         
         }
         else
         {
@@ -85,7 +93,11 @@ public struct StoryData
     //해당 스토리의 이미지
     public Sprite storySprite;
 
-    //해당 스토리 텍스트
+    //해당 스토리 텍스트_한글
     [TextArea(3, 5)]
-    public string storyText;
+    public string storyText_kor;
+
+    //해당 스토리 텍스트_영어
+    [TextArea(3, 5)]
+    public string storyText_eng;
 }

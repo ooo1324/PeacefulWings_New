@@ -599,38 +599,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   story:
   - storySprite: {fileID: 21300000, guid: 28918cd135118574489c352cd0441a56, type: 3}
-    storyText: "\uC61B\uB0A0 \uC61B\uC801\uC5D0 \uD3C9\uD654\uB85C\uC6B4 \uB300\uB959\uC5D0
+    storyText_kor: "\uC61B\uB0A0 \uC61B\uC801...\n\uD3C9\uD654\uB85C\uC6B4 \uB300\uB959\uC5D0
       \uAC80\uC740 \uBE44\uB458\uAE30 \uB098\uB77C\uC640 \uD770 \uBE44\uB458\uAE30
       \uB098\uB77C\uAC00 \uC788\uC5C8\uC2B5\uB2C8\uB2E4."
-  - storySprite: {fileID: 21300000, guid: 28918cd135118574489c352cd0441a56, type: 3}
-    storyText: 'Once upon a time...
+    storyText_eng: 'Once upon a time...
 
-      On a peaceful continent, there was a country
-      of black pigeons and a country of white pigeons.'
+      On a peaceful continent, there was
+      a country of black pigeons and a country of white pigeons.'
   - storySprite: {fileID: 21300000, guid: f85e2913d4f0d0b4988f78bae970ef13, type: 3}
-    storyText: "\uB450 \uB098\uB77C\uB294 \uC65C \uC2F8\uC6E0\uB294\uC9C0\uB3C4 \uAE30\uC5B5\uC774
-      \uB098\uC9C0 \uC54A\uC744\uB9CC\uD07C \uC624\uB7AB\uB3D9\uC548 \uC2F8\uC6E0\uC2B5\uB2C8\uB2E4."
-  - storySprite: {fileID: 21300000, guid: f85e2913d4f0d0b4988f78bae970ef13, type: 3}
-    storyText: The two countries fought for so long that I don't even remember why
-      they fought.
+    storyText_kor: "\uB450 \uB098\uB77C\uB294 \uC65C \uC2F8\uC6E0\uB294\uC9C0\uB3C4
+      \uAE30\uC5B5\uC774 \uB098\uC9C0 \uC54A\uC744\uB9CC\uD07C \uC624\uB7AB\uB3D9\uC548
+      \uC2F8\uC6E0\uC2B5\uB2C8\uB2E4."
+    storyText_eng: The two countries fought for so long that I don't even remember
+      why they fought.
   - storySprite: {fileID: 21300000, guid: 71805dad78d0a464eaf0655e5f24ec59, type: 3}
-    storyText: "\uBC31\uC131\uB4E4\uC758 \uB9C8\uC74C\uC5D4 \uBCD1\uC774 \uB4E4\uC5C8\uACE0
+    storyText_kor: "\uBC31\uC131\uB4E4\uC758 \uB9C8\uC74C\uC5D4 \uBCD1\uC774 \uB4E4\uC5C8\uACE0
       \uB450 \uB098\uB77C \uC0AC\uC774\uC758 \uACE8\uC740 \uC774\uC81C \uC808\uB300\uB85C
       \uBA54\uC6CC\uC9C0\uC9C0 \uC54A\uC744 \uAC83\uB9CC \uAC19\uC558\uC2B5\uB2C8\uB2E4."
-  - storySprite: {fileID: 21300000, guid: 71805dad78d0a464eaf0655e5f24ec59, type: 3}
-    storyText: The hearts of the people were sickened, and the chasm between the
-      two nations seemed like it would never be bridged.
+    storyText_eng: The hearts of the people were sickened, and the chasm between
+      the two nations seemed like it would never be bridged.
   - storySprite: {fileID: 0}
-    storyText: "\uADF8\uB7F0 \uC804\uC7C1\uD130 \uD55C \uAC00\uC6B4\uB370 \uD770\uBE44\uB458\uAE30
+    storyText_kor: "\uADF8\uB7F0 \uC804\uC7C1\uD130 \uD55C \uAC00\uC6B4\uB370 \uD770\uBE44\uB458\uAE30
       \uB098\uB77C\uC758 \u201C\uD53C\u201D\uC77C\uBCD1\uACFC \uAC80\uC740 \uBE44\uB458\uAE30
       \uB098\uB77C\uC758 \u201C\uC874\u201D\uC0C1\uC0AC\uAC00 \uC6B0\uC5F0\uCE58
       \uC54A\uAC8C \u201C\uD568\uAED8\u201D \uACE0\uB9BD\uB418\uB294\uB370..."
-  - storySprite: {fileID: 0}
-    storyText: In the middle of such a battlefield, Private "Pee" of the White Dove
-      Nation and Sergeant "John" of the Black Dove Nation are accidentally stranded
+    storyText_eng: In the middle of such a battlefield, Private "Pee" of the White
+      Dove Nation and Sergeant "John" of the Black Dove Nation are accidentally stranded
       "together"...
   text: {fileID: 408734401}
   storyImg: {fileID: 698860599}
+  isEnding: 0
 --- !u!4 &1059858690
 Transform:
   m_ObjectHideFlags: 0

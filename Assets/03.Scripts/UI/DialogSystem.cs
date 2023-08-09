@@ -133,7 +133,8 @@ public class DialogSystem : MonoBehaviour
             john_anim.SetInteger("activeType", 2);
             pee_anim.SetInteger("activeType", 1);
             peeImg.sprite = peeSpriteList[currData.imgIdx];
-            peeText.SetMsg(currData.talkText_kor);
+
+            peeText.SetMsg(AllGameData.isEng? currData.talkText_eng : currData.talkText_kor);
       
             audioSource.clip = peeAudioClip;
         }
@@ -142,7 +143,7 @@ public class DialogSystem : MonoBehaviour
             john_anim.SetInteger("activeType", 1);
             pee_anim.SetInteger("activeType", 2);
             johnImg.sprite = johnSpriteList[currData.imgIdx];
-            johnText.SetMsg(currData.talkText_kor);
+            johnText.SetMsg(AllGameData.isEng ? currData.talkText_eng : currData.talkText_kor);
         
             audioSource.clip = johnAudioClip;
         }

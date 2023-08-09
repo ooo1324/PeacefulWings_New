@@ -10,7 +10,7 @@ public class LightBeamCheck : MonoBehaviour
 
     private void Update()
     {
-        if (TriggerIdx >= 2)
+        if (TriggerIdx >= 3)
         {
             playableDirector.gameObject.SetActive(true);
             playableDirector.Play();

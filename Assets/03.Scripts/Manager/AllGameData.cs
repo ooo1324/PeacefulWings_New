@@ -6,6 +6,7 @@ public class AllGameData : MonoBehaviour
 {
     public static int Current_Level = 0;
     public static bool Current_Init = true;
+    public static bool isEng = false;
 
     // Start is called before the first frame update
     private void Awake()
