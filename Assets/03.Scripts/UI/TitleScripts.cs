@@ -10,4 +10,13 @@ public class TitleScripts : MonoBehaviour
         AllGameData.Current_Level += 1;
         SceneManager.LoadScene(AllGameData.Current_Level);
     }
+    public void CreditsScene()
+    {
+        SceneManager.LoadScene("CreditsScene");
+    }
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
 }
