@@ -53,4 +53,15 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         AllGameData.Current_Init = false;
     }
+
+    public void StopMove()
+    {
+        Debug.Log("Stop");
+        isStop = true;
+    }
+
+    public void StartMove()
+    {
+        isStop = false;
+    }
 }

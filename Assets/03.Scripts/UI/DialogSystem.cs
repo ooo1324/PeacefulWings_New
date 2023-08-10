@@ -14,6 +14,9 @@ public class DialogSystem : MonoBehaviour
     public AudioClip peeAudioClip;
     public AudioClip johnAudioClip;
 
+    public Text peeNameText;
+    public Text johnNameText;
+
     //Test
     public GameObject Pee;
     public GameObject John;
@@ -38,6 +41,16 @@ public class DialogSystem : MonoBehaviour
     private void Start()
     {
         idx = 0;
+        if (AllGameData.isEng)
+        {
+            peeNameText.text = "Private 'Pee'";
+            johnNameText.text = "Sergeant 'John'";     
+        }
+        else
+        {
+            peeNameText.text = "피 일병";
+            johnNameText.text = "존 상사";
+        }
     }
 
     public void TalkStart(EDialogType key)
@@ -45,22 +58,22 @@ public class DialogSystem : MonoBehaviour
         switch (key)
         {
             case EDialogType.start:
-                currTalkList = ParsingJson.dialogList.start;
+                currTalkList = AllGameData.dialogList.start;
                 break;
             case EDialogType.sprint:
-                currTalkList = ParsingJson.dialogList.sprint;
+                currTalkList = AllGameData.dialogList.sprint;
                 break;
             case EDialogType.push:
-                currTalkList = ParsingJson.dialogList.push;
+                currTalkList = AllGameData.dialogList.push;
                 break;
             case EDialogType.fly:
-                currTalkList = ParsingJson.dialogList.fly;
+                currTalkList = AllGameData.dialogList.fly;
                 break;
             case EDialogType.flyEnd:
-                currTalkList = ParsingJson.dialogList.flyEnd;
+                currTalkList = AllGameData.dialogList.flyEnd;
                 break;
             case EDialogType.end:
-                currTalkList = ParsingJson.dialogList.end;
+                currTalkList = AllGameData.dialogList.end;
                 break;
         }
 
@@ -80,6 +93,7 @@ public class DialogSystem : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            if(currTalkList == null) { return; }
             if (currTalkList.Count > idx)
             {
                 if (!isDialogPlay) return;

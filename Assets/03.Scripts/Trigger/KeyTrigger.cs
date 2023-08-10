@@ -7,6 +7,7 @@ public class KeyTrigger : MonoBehaviour
     public KeyCode keyCode;
     public GameObject keyboardObj;
     public string layerType;
+    public EDialogType dialogType;
     private bool isActive = false;
 
     private void Update()
@@ -25,40 +26,43 @@ public class KeyTrigger : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer(layerType))
         {
-            if (AllGameData.Current_Init)
-                keyboardObj.SetActive(true);
-
-            isActive = true;
+            Active();
         }
         else if (layerType == "")
         {
             if (collision.gameObject.CompareTag("Player"))
             {
-                if (AllGameData.Current_Init)
-                    keyboardObj.SetActive(true);
-
-                isActive = true;
+                Active();
             }
         }
     }
+
+    private void Active()
+    {
+        keyboardObj.SetActive(true);
+
+        isActive = true;
+    }
+
+    private void NonActive()
+    {
+        keyboardObj.SetActive(false);
+
+        isActive = false;
+    }
+
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer(layerType))
         {
-            if (AllGameData.Current_Init)
-                keyboardObj.SetActive(false);
-
-            isActive = false;
+            NonActive();
         }
         else if (layerType == "")
         {
             if (collision.gameObject.CompareTag("Player"))
             {
-                if (AllGameData.Current_Init)
-                    keyboardObj.SetActive(false);
-
-                isActive = false;
+                NonActive();
             }
         }
     }

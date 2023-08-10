@@ -5,15 +5,18 @@ using UnityEngine;
 
 public class ParsingJson : MonoBehaviour
 {
-    [HideInInspector]
-    public static DialogList dialogList;
-
     // Start is called before the first frame update
     void Start()
     {
+        if (AllGameData.dialogList != null) return;
         TextAsset textAsset = Resources.Load<TextAsset>("DialogData");
 
-        dialogList = JsonUtility.FromJson<DialogList>(textAsset.text);
+        AllGameData.dialogList = JsonUtility.FromJson<DialogList>(textAsset.text);
+
+        foreach (EDialogType dialogType in System.Enum.GetValues(typeof(EDialogType)))
+        {
+            AllGameData.dialogFlagList[dialogType] = false;
+        }
     }
 }
 

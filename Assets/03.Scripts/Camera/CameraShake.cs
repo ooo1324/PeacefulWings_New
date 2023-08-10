@@ -80,13 +80,11 @@ public class CameraShake : MonoBehaviour
     public void PlayShake()
     {
         isPlay = true;
-        GameManager.instance.isStop = true;
     }
 
     public void StopShake()
     {
         isPlay = false;
-        GameManager.instance.isStop = false;
     }
 
 }

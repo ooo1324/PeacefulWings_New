@@ -127,7 +127,7 @@ public class PlayerController : MonoBehaviour
                 if (nearBox != null)
                 {
                     Rigidbody2D rigid = nearBox.GetComponent<Rigidbody2D>();
-                    rigid.constraints = RigidbodyConstraints2D.None;
+                    rigid.constraints = RigidbodyConstraints2D.FreezeRotation;
                     anim.SetBool("isPush", true);
                 }
             }
@@ -138,7 +138,7 @@ public class PlayerController : MonoBehaviour
             if (nearBox != null)
             {
                 Rigidbody2D rigid = nearBox.GetComponent<Rigidbody2D>();
-                rigid.constraints = RigidbodyConstraints2D.FreezePositionX;
+                rigid.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
                 anim.SetBool("isPush", false);
             }
 
