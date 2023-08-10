@@ -20,8 +20,9 @@ public class PlayerController : MonoBehaviour
     SpriteRenderer spriter;
     [HideInInspector]
     public bool isGrounded = true;
-    
+
     private float speed;
+    
 
     private bool isPlayingAnim = false;
 
@@ -49,7 +50,7 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("isWalk", (inputVec.x != 0));
 
         if (GameManager.instance.isStop)
-        {
+        { 
             rigid.velocity = Vector2.zero;
             return;
         }
@@ -120,28 +121,15 @@ public class PlayerController : MonoBehaviour
     {
         if (GameManager.instance.isStop) return;
         if (isPlayingAnim) return;
+
         if (value.started)
         {
-            if (isPush)
-            {
-                if (nearBox != null)
-                {
-                    Rigidbody2D rigid = nearBox.GetComponent<Rigidbody2D>();
-                    rigid.constraints = RigidbodyConstraints2D.FreezeRotation;
-                    anim.SetBool("isPush", true);
-                }
-            }
+            isPush = true;
         }
 
         if (value.canceled)
         {
-            if (nearBox != null)
-            {
-                Rigidbody2D rigid = nearBox.GetComponent<Rigidbody2D>();
-                rigid.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
-                anim.SetBool("isPush", false);
-            }
-
+            isPush = false;
         }
     }
 
@@ -195,27 +183,15 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void PushAnimation(bool isPlay)
     {
-        if (collision.gameObject.CompareTag("Box"))
+        if (isPlay)
         {
-            if (birdType == EBirdType.Pee)
-            {
-                isPush = true;
-                nearBox = collision.gameObject;
-            }
+            anim.SetBool("isPush", true);
         }
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Box"))
+        else
         {
-            if (birdType == EBirdType.Pee)
-            {
-                isPush = false;
-                nearBox = collision.gameObject;
-            }
+            anim.SetBool("isPush", false);
         }
-    }
+    }  
 }

@@ -451,6 +451,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1765752787}
     m_Modifications:
+    - target: {fileID: 1105590541203299071, guid: bfb1534a140847f4c9a2df401265f7e6, type: 3}
+      propertyPath: m_Text
+      value: '    L Shift'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1105590541308095197, guid: bfb1534a140847f4c9a2df401265f7e6, type: 3}
+      propertyPath: m_Text
+      value: '    L Shift'
+      objectReference: {fileID: 0}
     - target: {fileID: 1105590541637816730, guid: bfb1534a140847f4c9a2df401265f7e6, type: 3}
       propertyPath: m_Name
       value: Keyboard_MidKey
@@ -15446,14 +15454,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 488371129942442711, guid: 9b6b692838c54d340aa1e618aaa23223, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2237940660695580992, guid: 9b6b692838c54d340aa1e618aaa23223, type: 3}
-      propertyPath: m_SortingOrder
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 5508467951814953741, guid: 9b6b692838c54d340aa1e618aaa23223, type: 3}
       propertyPath: m_RootOrder
       value: 29
@@ -16789,14 +16789,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1839451751}
-  m_LocalRotation: {x: -0, y: -0, z: 0.1641901, w: 0.98642874}
+  m_LocalRotation: {x: -0, y: -0, z: 0.01595569, w: 0.99987274}
   m_LocalPosition: {x: 34.56, y: -9.44, z: -0.07899104}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1323769208}
   m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 18.9}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.828}
 --- !u!212 &1839451753
 SpriteRenderer:
   m_ObjectHideFlags: 0

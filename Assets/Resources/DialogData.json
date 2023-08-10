@@ -9,8 +9,8 @@
 		{
 			"birdType" : 1,
 			"imgIdx" : 1,
-			"talkText_kor" : "적군인가! 손들어...! 윽! 무기도 없는데 날개까지...!",
-			"talkText_eng" : "Enemy! Hands up...! Ugh! No weapons, and wings...!"
+			"talkText_kor" : "적군인가! 손들어....! 윽! 무기도 없는데 날개까지 다쳤잖아...!",
+			"talkText_eng" : "Enemy! Hands up...! Ugh! No weapons, and wings are injured...!"
 		},
 		{
 			"birdType" : 0,
@@ -39,7 +39,7 @@
 		{
 			"birdType" : 0,
 			"imgIdx" : 2,
-			"talkText_kor" : "(거만한 아저씨네...그래도 이렇게 말하면 화내겠지?) \n 하.하. 쿨하시네요! 좋습니다! 가볼까요!",
+			"talkText_kor" : "(거만한 아저씨네...그래도 이렇게 말하면 화내겠지?)\n하.하. 쿨하시네요! 좋습니다! 가볼까요!",
 			"talkText_eng" : "(You're being arrogant...but you're going to get mad at me for saying that, right?) Ha. Cool, that's great, let's go!"
 		}
 	],

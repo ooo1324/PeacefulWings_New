@@ -824,7 +824,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -439, y: -134}
+  m_AnchoredPosition: {x: -439, y: -99}
   m_SizeDelta: {x: 1199.1, y: 313.3079}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1971913164
@@ -860,11 +860,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "<Team '4k'>\n\n\uAE30\uD68D : \uAE40\uC218\uC5F0      \uC544\uD2B8 : \uC591\uCC3D\uC644,
-    \uAE40\uC218\uC5F0\n\uD504\uB85C\uADF8\uB798\uBC0D : \uAE40\uC18C\uC5F0, \uAD6C\uD604\uD718\n\uC2DC\uB098\uB9AC\uC624
-    : \uC591\uCC3D\uC644\n\uC0AC\uC6B4\uB4DC \uD3B8\uC9D1 : \uAE40\uC218\uC5F0\n\uBC88\uC5ED
-    : \uAD6C\uD604\uD718\n\uD0C0\uC774\uD2C0 \uBD88\uD0C0\uB294 \uBC30\uACBD \uC774\uBBF8\uC9C0
-    : <a href=\"http://www.freepik.com\">Designed by upklyak / Freepik</a>\n"
+  m_Text: "<Team '4k'>\n\n- \uAE30\uD68D : \uAE40\uC218\uC5F0, \uC591\uCC3D\uC644  
+    \n- \uC544\uD2B8 : \uC591\uCC3D\uC644, \uAE40\uC218\uC5F0\n- \uD504\uB85C\uADF8\uB798\uBC0D
+    : \uAE40\uC18C\uC5F0, \uAD6C\uD604\uD718\n- \uC2DC\uB098\uB9AC\uC624 : \uC591\uCC3D\uC644\n-
+    \uC0AC\uC6B4\uB4DC \uD3B8\uC9D1 : \uAE40\uC218\uC5F0\n- \uBC88\uC5ED : \uAD6C\uD604\uD718\n\n\uD0C0\uC774\uD2C0
+    \uBD88\uD0C0\uB294 \uBC30\uACBD \uC774\uBBF8\uC9C0 : <a href=\"http://www.freepik.com\">Designed
+    by upklyak / Freepik</a>\n"
 --- !u!222 &1971913165
 CanvasRenderer:
   m_ObjectHideFlags: 0
