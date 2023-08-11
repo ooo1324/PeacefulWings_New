@@ -13,11 +13,13 @@ public class StoryScripts : MonoBehaviour
     public bool isEnding;
 
     TextEffect textEffect;
+    AudioSource audioSource;
     private int idx = 0;
 
     private void Awake()
     {
         textEffect = text.GetComponent<TextEffect>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -45,6 +47,12 @@ public class StoryScripts : MonoBehaviour
     {
         if (story.Count > idx)
         {
+            if (isEnding && story.Count - 1 == idx)
+            {
+                if(!audioSource.isPlaying)
+                    audioSource.Play();    
+            }
+
             if (story[idx].storySprite == null)
                 storyImg.color = Color.black;
             else
@@ -63,13 +71,8 @@ public class StoryScripts : MonoBehaviour
         }
         else
         {
-            if (isEnding)
+            if (!isEnding)
             {
-
-            }
-            else
-            {
-
                 AllGameData.Current_Level += 1;
                 //Next Scene
                 SceneManager.LoadScene(AllGameData.Current_Level);

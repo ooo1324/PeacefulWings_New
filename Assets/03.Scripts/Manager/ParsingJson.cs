@@ -42,7 +42,8 @@ public class DialogList
     public List<DialogData> push;
     public List<DialogData> fly;
     public List<DialogData> flyEnd;
-    public List<DialogData> end;
+    public List<DialogData> puzzleStage;
+    public List<DialogData> goOut;
 }
 
 public enum EDialogType
@@ -52,5 +53,6 @@ public enum EDialogType
     push,
     fly,
     flyEnd,
-    end
+    puzzleStage,
+    goOut
 }

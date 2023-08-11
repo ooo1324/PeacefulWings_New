@@ -72,8 +72,11 @@ public class DialogSystem : MonoBehaviour
             case EDialogType.flyEnd:
                 currTalkList = AllGameData.dialogList.flyEnd;
                 break;
-            case EDialogType.end:
-                currTalkList = AllGameData.dialogList.end;
+            case EDialogType.puzzleStage:
+                currTalkList = AllGameData.dialogList.puzzleStage;
+                break;
+            case EDialogType.goOut:
+                currTalkList = AllGameData.dialogList.goOut;
                 break;
         }
 

@@ -56,7 +56,6 @@ public class GameManager : MonoBehaviour
 
     public void StopMove()
     {
-        Debug.Log("Stop");
         isStop = true;
     }
 

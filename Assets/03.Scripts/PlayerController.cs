@@ -22,9 +22,9 @@ public class PlayerController : MonoBehaviour
     public bool isGrounded = true;
 
     private float speed;
-    
 
-    private bool isPlayingAnim = false;
+    [HideInInspector]
+    public bool isPlayingAnim = false;
 
     private GameObject nearBox;
     private AudioSource audioSource;
@@ -135,7 +135,7 @@ public class PlayerController : MonoBehaviour
 
     public void LabberAction(Transform labberPos)
     {
-        if (birdType != EBirdType.Pigeon && !isPlayingAnim)
+        if (birdType != EBirdType.Pigeon)
         {
             transform.position = labberPos.position;
             rigid.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
@@ -146,8 +146,8 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator LabberAnim()
     {
-        anim.SetTrigger("DoLabber");
         isPlayingAnim = true;
+        anim.SetTrigger("DoLabber");
         yield return new WaitForSeconds(1.2f);
         rigid.constraints = RigidbodyConstraints2D.FreezeRotation;
         isPlayingAnim = false;

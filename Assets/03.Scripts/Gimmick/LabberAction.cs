@@ -25,6 +25,7 @@ public class LabberAction : MonoBehaviour
     GameObject actionBird;
     PlayerController playerController;
     private AudioSource audioSource;
+    private bool isAnimPlay = false;
 
     private void Awake()
     {
@@ -130,6 +131,9 @@ public class LabberAction : MonoBehaviour
 
     IEnumerator LabberActiveAction()
     {
+        if (isAnimPlay) yield return null;
+
+        isAnimPlay = true;
         LabberObject.SetActive(false);
         audioSource.Play();
         playerController.LabberAction(gameObject.transform);
@@ -151,5 +155,6 @@ public class LabberAction : MonoBehaviour
         }
 
         LabberObject.SetActive(true);
+        isAnimPlay = false;
     }
 }

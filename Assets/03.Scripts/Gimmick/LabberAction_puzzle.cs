@@ -28,14 +28,22 @@ public class LabberAction_puzzle : MonoBehaviour
     GameObject actionBird;
     PlayerController playerController;
     private AudioSource audioSource;
+    public bool isLeverOpen = false;
 
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
+        LightBeamCheck.onOpenDoorEvent.AddListener(OpenDoorEventFunc);
+    }
+
+    private void OpenDoorEventFunc(bool isOpen)
+    {
+        isLeverOpen = true;
     }
 
     public void OnRightLabber(InputValue value)
     {
+        if (isLeverOpen) return;
         if (isAction) return;
         if (isLabber)
         {
@@ -61,6 +69,7 @@ public class LabberAction_puzzle : MonoBehaviour
 
     public void OnLeftLabber(InputValue value)
     {
+        if (isLeverOpen) return;
         if (isAction) return;
         if (isLabber)
         {
@@ -131,10 +140,11 @@ public class LabberAction_puzzle : MonoBehaviour
 
     IEnumerator LabberActiveAction()
     {
+        if (isAction) yield return null;
+        playerController.LabberAction(gameObject.transform);
         isAction = true;
         LabberObject.SetActive(false);
         audioSource.Play();
-        playerController.LabberAction(gameObject.transform);
         yield return new WaitForSeconds(delayTime);
     
         if (LbSystemType == ELabberType.OneLabber)

@@ -8,8 +8,8 @@ using UnityEngine.Events;
 public class CameraShake : MonoBehaviour
 {
     public float ShakeDuration = 0.3f;          // Time the Camera Shake effect will last
-    public float ShakeAmplitude = 1.2f;         // Cinemachine Noise Profile Parameter
-    public float ShakeFrequency = 2.0f;         // Cinemachine Noise Profile Parameter
+    public float ShakeAmplitude = 2f;         // Cinemachine Noise Profile Parameter
+    public float ShakeFrequency = 1.7f;         // Cinemachine Noise Profile Parameter
 
     private float ShakeElapsedTime = 0f;
     private AudioSource audioSource;

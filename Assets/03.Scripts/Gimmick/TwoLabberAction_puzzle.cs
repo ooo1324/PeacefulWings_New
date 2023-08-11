@@ -42,7 +42,7 @@ public class TwoLabberAction_puzzle : MonoBehaviour
 
     IEnumerator ActiveAction()
     {
-        yield return new WaitForSeconds(firstLever.delayTime);
+        yield return new WaitForSeconds(0.2f);
         foreach (LightBeamController beam in firstLever.beams)
         {
             beam.RotateLightBeam(firstLever.direction);

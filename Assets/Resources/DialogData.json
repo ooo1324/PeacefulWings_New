@@ -135,39 +135,38 @@
 			"talkText_eng" : "....Get the hell out of here."
 		}
 	],
-	"end" : [
+	"puzzleStage" : [
 		{
 			"birdType" : 1,
-			"imgIdx" : 0,
-			"talkText_kor" : "....고맙네 자네가 아니었으면 꼼짝없이 새모이가 될뻔 했어.",
-			"talkText_eng" : "....Thank you, I would have died if it wasn't for you."
+			"imgIdx" : 1,
+			"talkText_kor" : "이 장치들은 뭐지? 래버들이 잔뜩있잖아...?",
+			"talkText_eng" : "What are these devices? There are a lot of lever switch, right?"
 		},
 		{
 			"birdType" : 0,
-			"imgIdx" : 0,
-			"talkText_kor" : "저도 상사님 아니었으면 큰일날뻔 했습니다. 정말 감사합니다.",
-			"talkText_eng" : "I would have been in trouble if it wasn't for you, so thank you so much."
-		}
-		,
+			"imgIdx" : 5,
+			"talkText_kor" : "여기 래버 뒤 표지판에 숫자가 써있는데요?",
+			"talkText_eng" : "There's a number on the sign behind the lever switch."
+		},
 		{
 			"birdType" : 1,
-			"imgIdx" : 4,
-			"talkText_kor" : "....자네와 탈출하면서 많은 생각이 들었네. 우리는 다를게 없어!\n서로 힘을 합치니까 믿을 수 없는 일도 해내지 않았나!",
-			"talkText_eng" : "....I've been thinking a lot about escaping with you. We're no different, and together we've done unbelievable things!"
+			"imgIdx" : 5,
+			"talkText_kor" : "그게 힌트같군. 머리를 맞대고 풀어보자고!",
+			"talkText_eng" : "That sounds like a hint. Let's put our heads together!"
 		}
-		,
+	],
+	"goOut" : [
 		{
 			"birdType" : 0,
 			"imgIdx" : 4,
-			"talkText_kor" : "맞습니다.... 우리는....이제...",
-			"talkText_eng" : "That's right.... We have....now..."
-		}
-		,
+			"talkText_kor" : "탈출구가 열렸습니다! 상사님!",
+			"talkText_eng" : "The way out is open! Sir!"
+		},
 		{
 			"birdType" : 1,
 			"imgIdx" : 4,
-			"talkText_kor" : "전쟁을 멈춰야하네!(합니다!)",
-			"talkText_eng" : "We need to stop the war!"
+			"talkText_kor" : "나도 봤다네! 얼른 날아서 이곳을 탈출하자고!",
+			"talkText_eng" : "I saw it! Let's fly and get out of here!"
 		}
 	]
 }
