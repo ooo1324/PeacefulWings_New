@@ -14,7 +14,8 @@ public class PlayerController : MonoBehaviour
 
     [HideInInspector]
     public bool isPush = false;
-    Vector2 inputVec;
+    [HideInInspector]
+    public Vector2 inputVec;
     Rigidbody2D rigid;
     Animator anim;
     SpriteRenderer spriter;
@@ -25,6 +26,9 @@ public class PlayerController : MonoBehaviour
 
     [HideInInspector]
     public bool isPlayingAnim = false;
+
+    [HideInInspector]
+    public bool isJump = false;
 
     private GameObject nearBox;
     private AudioSource audioSource;
@@ -45,11 +49,9 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {   
-        if (isPlayingAnim) return;
-
         anim.SetBool("isWalk", (inputVec.x != 0));
 
-        if (GameManager.instance.isStop)
+        if (GameManager.instance.isStop || isPlayingAnim)
         { 
             rigid.velocity = Vector2.zero;
             return;
@@ -79,6 +81,7 @@ public class PlayerController : MonoBehaviour
             {
                 if (isGrounded)
                 {
+                    isJump = true;
                     rigid.velocity = new Vector2(rigid.velocity.x, jumpPower);
                     audioSource.clip = jumpAudio;
                     audioSource.Play();
@@ -96,6 +99,7 @@ public class PlayerController : MonoBehaviour
         {
             if (rigid.velocity.y > 0)
             {
+                isJump = false;
                 rigid.velocity = new Vector2(rigid.velocity.x, rigid.velocity.y * 0.6f);
             }
         }
@@ -135,8 +139,9 @@ public class PlayerController : MonoBehaviour
 
     public void LabberAction(Transform labberPos)
     {
-        if (birdType != EBirdType.Pigeon)
+        if (birdType != EBirdType.Pigeon && !isPlayingAnim)
         {
+            isPlayingAnim = true;
             transform.position = labberPos.position;
             rigid.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
             StartCoroutine(LabberAnim());
@@ -146,7 +151,6 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator LabberAnim()
     {
-        isPlayingAnim = true;
         anim.SetTrigger("DoLabber");
         yield return new WaitForSeconds(1.2f);
         rigid.constraints = RigidbodyConstraints2D.FreezeRotation;
@@ -161,7 +165,7 @@ public class PlayerController : MonoBehaviour
         if (rayHit.collider != null)
         {
             isGrounded = true;
-
+            isJump = false;
             if (birdType == EBirdType.Pigeon)
                 anim.SetBool("isFly", false);
         }

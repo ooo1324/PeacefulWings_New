@@ -1256,6 +1256,7 @@ MonoBehaviour:
   direction: 1
   delayTime: 0.9
   twoladderAction: {fileID: 0}
+  isLeverOpen: 0
 --- !u!1 &105066443
 GameObject:
   m_ObjectHideFlags: 0
@@ -14743,6 +14744,7 @@ MonoBehaviour:
   direction: -1
   delayTime: 0.9
   twoladderAction: {fileID: 1611892125}
+  isLeverOpen: 0
 --- !u!1 &834757301
 GameObject:
   m_ObjectHideFlags: 0
@@ -24067,6 +24069,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 358621714, guid: fa9fc1800a0b3cd42ac39402a4622e77, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3694171624939801226, guid: fa9fc1800a0b3cd42ac39402a4622e77, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -24409,6 +24415,7 @@ MonoBehaviour:
   direction: -1
   delayTime: 0.9
   twoladderAction: {fileID: 1611892125}
+  isLeverOpen: 0
 --- !u!1 &1715689057
 GameObject:
   m_ObjectHideFlags: 0
@@ -26188,6 +26195,7 @@ MonoBehaviour:
   direction: 1
   delayTime: 0.9
   twoladderAction: {fileID: 0}
+  isLeverOpen: 0
 --- !u!1 &1957904271
 GameObject:
   m_ObjectHideFlags: 0
