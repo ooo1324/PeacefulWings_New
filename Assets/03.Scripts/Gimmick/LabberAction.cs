@@ -44,7 +44,7 @@ public class LabberAction : MonoBehaviour
                     {
                         if (twoladderAction.firstLabber && twoladderAction.secondLabber)
                         {
-                            if(!isInit)
+                            if(twoladderAction.isActionInit)
                              StartCoroutine(LabberActiveAction());
                         }
                     }
@@ -70,7 +70,7 @@ public class LabberAction : MonoBehaviour
                     {
                         if (twoladderAction.firstLabber && twoladderAction.secondLabber)
                         {
-                            if (!isInit)
+                            if (twoladderAction.isActionInit)
                                 StartCoroutine(LabberActiveAction());
                         }
                     }

@@ -547,6 +547,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9043389785251495293, guid: fc9cc9060774e3d45a18258f1efe4da4, type: 3}
+      propertyPath: m_SceneBindings.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043389785251495293, guid: fc9cc9060774e3d45a18258f1efe4da4, type: 3}
+      propertyPath: m_SceneBindings.Array.data[6].key
+      value: 
+      objectReference: {fileID: 1502576452867316589, guid: 18adadcfa4431a048875174ad247c653, type: 2}
+    - target: {fileID: 9043389785251495293, guid: fc9cc9060774e3d45a18258f1efe4da4, type: 3}
       propertyPath: m_SceneBindings.Array.data[2].value
       value: 
       objectReference: {fileID: 93895650}
@@ -554,6 +562,10 @@ PrefabInstance:
       propertyPath: m_SceneBindings.Array.data[4].value
       value: 
       objectReference: {fileID: 1671605007}
+    - target: {fileID: 9043389785251495293, guid: fc9cc9060774e3d45a18258f1efe4da4, type: 3}
+      propertyPath: m_SceneBindings.Array.data[6].value
+      value: 
+      objectReference: {fileID: 1190630083}
     - target: {fileID: 9043389785251495294, guid: fc9cc9060774e3d45a18258f1efe4da4, type: 3}
       propertyPath: m_Name
       value: CinematicCamera_Bridge
@@ -1703,7 +1715,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9043389785251495294, guid: fc9cc9060774e3d45a18258f1efe4da4, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9043389786424302117, guid: fc9cc9060774e3d45a18258f1efe4da4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1898,6 +1910,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 77.4993, y: 2.5796642}
   m_EdgeRadius: 0
+--- !u!1 &137238135 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9043389785251495294, guid: fc9cc9060774e3d45a18258f1efe4da4, type: 3}
+  m_PrefabInstance: {fileID: 130405205}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &139015890
 GameObject:
   m_ObjectHideFlags: 0
@@ -7024,11 +7041,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5145343038826816693, guid: c1ebb3c2e73dc754780a5a0fb8583360, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.28
+      value: -15.85
       objectReference: {fileID: 0}
     - target: {fileID: 5145343038826816693, guid: c1ebb3c2e73dc754780a5a0fb8583360, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.63
+      value: 0.23
       objectReference: {fileID: 0}
     - target: {fileID: 5145343038826816693, guid: c1ebb3c2e73dc754780a5a0fb8583360, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8022,7 +8039,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8451014491800191354, guid: e0d770790e8d06e49968e7d4da63e845, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.970168
+      value: 8.85
       objectReference: {fileID: 0}
     - target: {fileID: 8451014491800191354, guid: e0d770790e8d06e49968e7d4da63e845, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13901,9 +13918,10 @@ MonoBehaviour:
   firstLabber: 0
   secondLabber: 0
   playableDirector: {fileID: 130405207}
-  actionObj: {fileID: 580938210}
+  actionObj: {fileID: 137238135}
   keyObj: {fileID: 1525130407}
   dialogObj: {fileID: 603200685}
+  isActionInit: 0
 --- !u!4 &1614288040 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9043389785251495292, guid: fc9cc9060774e3d45a18258f1efe4da4, type: 3}
@@ -14555,6 +14573,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 358621714, guid: fa9fc1800a0b3cd42ac39402a4622e77, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3694171624939801226, guid: fa9fc1800a0b3cd42ac39402a4622e77, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -15694,7 +15716,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9043389785251495293, guid: fc9cc9060774e3d45a18258f1efe4da4, type: 3}
       propertyPath: m_SceneBindings.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9043389785251495293, guid: fc9cc9060774e3d45a18258f1efe4da4, type: 3}
       propertyPath: m_SceneBindings.Array.data[1].key
@@ -15713,6 +15735,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 464867164321356902, guid: 18adadcfa4431a048875174ad247c653, type: 2}
     - target: {fileID: 9043389785251495293, guid: fc9cc9060774e3d45a18258f1efe4da4, type: 3}
+      propertyPath: m_SceneBindings.Array.data[5].key
+      value: 
+      objectReference: {fileID: 1502576452867316589, guid: 18adadcfa4431a048875174ad247c653, type: 2}
+    - target: {fileID: 9043389785251495293, guid: fc9cc9060774e3d45a18258f1efe4da4, type: 3}
       propertyPath: m_SceneBindings.Array.data[1].value
       value: 
       objectReference: {fileID: 1492607316}
@@ -15724,6 +15750,10 @@ PrefabInstance:
       propertyPath: m_SceneBindings.Array.data[3].value
       value: 
       objectReference: {fileID: 1671605007}
+    - target: {fileID: 9043389785251495293, guid: fc9cc9060774e3d45a18258f1efe4da4, type: 3}
+      propertyPath: m_SceneBindings.Array.data[5].value
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 9043389785251495294, guid: fc9cc9060774e3d45a18258f1efe4da4, type: 3}
       propertyPath: m_Name
       value: CinematicCamera_Box
@@ -16052,11 +16082,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5234630747760052129, guid: bba0b83db3c8e9f4296bc8cd83c8e45b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.2
+      value: -13.769995
       objectReference: {fileID: 0}
     - target: {fileID: 5234630747760052129, guid: bba0b83db3c8e9f4296bc8cd83c8e45b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.8
+      value: 0.39999926
       objectReference: {fileID: 0}
     - target: {fileID: 5234630747760052129, guid: bba0b83db3c8e9f4296bc8cd83c8e45b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -17408,11 +17438,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1778983029970170750, guid: cc3840e7f08ec684d88448f42827df96, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.28
+      value: -15.85
       objectReference: {fileID: 0}
     - target: {fileID: 1778983029970170750, guid: cc3840e7f08ec684d88448f42827df96, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.63
+      value: 3.23
       objectReference: {fileID: 0}
     - target: {fileID: 1778983029970170750, guid: cc3840e7f08ec684d88448f42827df96, type: 3}
       propertyPath: m_LocalPosition.z

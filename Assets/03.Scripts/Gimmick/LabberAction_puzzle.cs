@@ -55,13 +55,13 @@ public class LabberAction_puzzle : MonoBehaviour
                     {
                         if (twoladderAction.firstLabber && twoladderAction.secondLabber)
                         {
-                             StartCoroutine(LabberActiveAction());
+                            LeverCoroutineStart();
                         }
                     }
                 }
                 else
                 {
-                        StartCoroutine(LabberActiveAction());
+                    LeverCoroutineStart();
                 }
             }
         }
@@ -81,16 +81,24 @@ public class LabberAction_puzzle : MonoBehaviour
                     {
                         if (twoladderAction.firstLabber && twoladderAction.secondLabber)
                         {
-                                StartCoroutine(LabberActiveAction());
+                            LeverCoroutineStart();
                         }
                     }
                 }
                 else
                 {
-                        StartCoroutine(LabberActiveAction());
+                    LeverCoroutineStart();
                 }
             }
         }
+    }
+
+    private void LeverCoroutineStart()
+    {
+        if (playerController.inputVec.x != 0) return;
+        if (playerController.isJump) return;
+        if (playerController.isPlayingAnim) return;
+        StartCoroutine(LabberActiveAction());
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

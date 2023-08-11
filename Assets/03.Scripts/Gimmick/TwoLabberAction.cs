@@ -17,6 +17,13 @@ public class TwoLabberAction : MonoBehaviour
     public GameObject keyObj;
     public GameObject dialogObj;
 
+    public bool isActionInit;
+
+    private void Start()
+    {
+        isActionInit = true;
+    }
+
     public void CompleteAction(EBirdType type)
     {
         if (isInit)
@@ -28,6 +35,8 @@ public class TwoLabberAction : MonoBehaviour
         {
             if (!timeOut)
             {
+                if (!isActionInit) return;
+                isActionInit = false;
                 actionObj.SetActive(true);
                 keyObj.SetActive(true);
                 dialogObj.SetActive(true);

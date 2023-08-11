@@ -18,7 +18,6 @@ public class PressButtonAction : MonoBehaviour
     IEnumerator BtAction()
     {
         anim.SetBool("isPress", true);
-        yield return new WaitForSeconds(0.5f);
         if (!isInit)
         {
             isInit = true;
@@ -27,11 +26,9 @@ public class PressButtonAction : MonoBehaviour
                 playableDirector.Play();
             }
         }
-        else
-        {
-            abledObj.SetActive(true);
-            disabledObj.SetActive(false);
-        }
+        yield return new WaitForSeconds(0.5f);   
+        abledObj.SetActive(true);
+        disabledObj.SetActive(false);
     }
 
     IEnumerator BtAction_Disalbe()
